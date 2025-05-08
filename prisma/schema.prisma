@@ -39,6 +39,6 @@ model ServiceRecord {
   serviceDate    DateTime
   completionDate DateTime?
   description    String
-  status         ServiceStatus
+  status         ServiceStatus @default(pending)
   bike           Bike          @relation(fields: [bikeId], references: [bikeId])
 }
