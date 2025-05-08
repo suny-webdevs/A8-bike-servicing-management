@@ -6,7 +6,7 @@ const router = Router()
 router.post("/", bikeControllers.createBike)
 router.get("/", bikeControllers.getAllBikes)
 router.get("/:id", bikeControllers.getBikeById)
-router.put("/:id", bikeControllers.updateBikeById)
-router.delete("/:id", bikeControllers.deleteBikeById)
+// router.put("/:id", bikeControllers.updateBikeById)
+// router.delete("/:id", bikeControllers.deleteBikeById)
 
 export const bikeRoutes = router

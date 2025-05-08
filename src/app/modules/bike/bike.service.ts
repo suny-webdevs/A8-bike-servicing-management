@@ -13,18 +13,18 @@ const getBikeById = async (bikeId: string) => {
   return await prisma.bike.findUnique({ where: { bikeId } })
 }
 
-const updateBikeById = async (bikeId: string, data: Partial<Bike>) => {
-  return await prisma.bike.update({ where: { bikeId }, data })
-}
+// const updateBikeById = async (bikeId: string, data: Partial<Bike>) => {
+//   return await prisma.bike.update({ where: { bikeId }, data })
+// }
 
-const deleteBikeById = async (bikeId: string) => {
-  return await prisma.bike.delete({ where: { bikeId } })
-}
+// const deleteBikeById = async (bikeId: string) => {
+//   return await prisma.bike.delete({ where: { bikeId } })
+// }
 
 export const bikeServices = {
   createBike,
   getAllBikes,
   getBikeById,
-  updateBikeById,
-  deleteBikeById,
+  // updateBikeById,
+  // deleteBikeById,
 }

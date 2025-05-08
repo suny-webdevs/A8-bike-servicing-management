@@ -20,14 +20,9 @@ const updateServiceById = async (
   return await prisma.serviceRecord.update({ where: { serviceId }, data })
 }
 
-// const deleteServiceById = async (serviceId: string) => {
-//   return await prisma.serviceRecord.delete({ where: { serviceId } })
-// }
-
 export const serviceRecordServices = {
   createService,
   getAllServices,
   getServiceById,
   updateServiceById,
-  // deleteServiceById,
 }
