@@ -3,6 +3,7 @@ import cors from "cors"
 import globalErrorHandler from "./app/middleware/globalErrorHandler"
 import notfound from "./app/middleware/notFound"
 import { customerRoutes } from "./app/modules/customer/customer.route"
+import { bikeRoutes } from "./app/modules/bike/bike.route"
 
 const app: Application = express()
 
@@ -10,6 +11,7 @@ app.use(express.json())
 app.use(cors())
 
 app.use("/api/customers", customerRoutes)
+app.use("/api/bikes", bikeRoutes)
 
 app.get("/", (req: Request, res: Response) => {
   res.json({ message: "Server is running on home route" })

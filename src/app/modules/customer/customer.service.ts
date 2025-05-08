@@ -11,25 +11,22 @@ const getAllCustomers = async () => {
   return result
 }
 
-const getCustomerById = async (id: string) => {
+const getCustomerById = async (customerId: string) => {
   const result = await prisma.customer.findUnique({
-    where: { id },
+    where: { customerId },
   })
   return result
 }
 
-const updateACustomer = async (
-  id: string,
-  data: Partial<{ name: string; phone: string }>
-) => {
-  return prisma.customer.update({
-    where: { id },
+const updateACustomer = async (customerId: string, data: Partial<Customer>) => {
+  return await prisma.customer.update({
+    where: { customerId },
     data,
   })
 }
 
-const deleteACustomer = async (id: string) => {
-  return prisma.customer.delete({ where: { id } })
+const deleteACustomer = async (customerId: string) => {
+  return await prisma.customer.delete({ where: { customerId } })
 }
 
 export const customerService = {
