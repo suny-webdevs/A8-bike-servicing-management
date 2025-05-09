@@ -35,7 +35,7 @@ enum ServiceStatus {
 
 model ServiceRecord {
   serviceId      String        @id @default(uuid())
-  bikeId         String        @unique
+  bikeId         String
   serviceDate    DateTime
   completionDate DateTime?
   description    String
