@@ -164,11 +164,9 @@ export default prisma
 
 ```json
 "scripts": {
-  "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+  "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
   "build": "tsc",
-  "start": "node dist/app.js",
-  "prisma:generate": "prisma generate",
-  "prisma:migrate": "prisma migrate dev"
+  "start": "node dist/server.js"
 }
 
 ```
