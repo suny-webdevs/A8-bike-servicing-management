@@ -109,6 +109,7 @@ npm install @prisma/client
 ### 6.2 Initialize Prisma
 
 ```bash
+npx prisma
 npx prisma init
 
 ```
@@ -127,19 +128,10 @@ DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE"
 
 > Example: postgresql://postgres:admin@localhost:5432/mydb
 
----
-
-### 8. **Generate Prisma Client**
-
-```bash
-npx prisma generate
-
-```
-
 ### 9. **Run Migration**
 
 ```bash
-npx prisma migrate dev --name init
+npx prisma migrate dev
 
 ```
 
