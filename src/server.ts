@@ -1,11 +1,9 @@
 import app from "./app"
 
-const port = 3000
-
 async function main() {
   try {
-    app.listen(port, () => {
-      console.log(`server is running on http://localhost:${port}`)
+    app.listen(process.env.PORT, () => {
+      console.log(`server is running on http://localhost:${process.env.PORT}`)
     })
   } catch (error) {
     console.log(error)
