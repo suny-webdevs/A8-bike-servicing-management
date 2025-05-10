@@ -1,8 +1,6 @@
-# README
-
 # BSM - Bike Servicing Management
 
-[Live link](https://bsm.up.railway.app/)
+[Live link](https://bsms.up.railway.app/)
 
 ## Summery
 
@@ -37,7 +35,6 @@ This RESTful API enables service centers to efficiently manage their operations 
 Certainly. Below is a professional and production-aligned **step-by-step project setup guide** for a backend stack using:
 
 > Node.js + Express.js + TypeScript + Prisma ORM + PostgreSQL
-> 
 
 ---
 
@@ -129,7 +126,6 @@ DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE"
 ```
 
 > Example: postgresql://postgres:admin@localhost:5432/mydb
-> 
 
 ---
 
