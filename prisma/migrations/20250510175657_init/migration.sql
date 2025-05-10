@@ -30,7 +30,7 @@ CREATE TABLE "ServiceRecord" (
     "serviceDate" TIMESTAMP(3) NOT NULL,
     "completionDate" TIMESTAMP(3),
     "description" TEXT NOT NULL,
-    "status" "ServiceStatus" NOT NULL,
+    "status" "ServiceStatus" NOT NULL DEFAULT 'pending',
 
     CONSTRAINT "ServiceRecord_pkey" PRIMARY KEY ("serviceId")
 );
@@ -40,9 +40,6 @@ CREATE UNIQUE INDEX "Customer_email_key" ON "Customer"("email");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Bike_customerId_key" ON "Bike"("customerId");
-
--- CreateIndex
-CREATE UNIQUE INDEX "ServiceRecord_bikeId_key" ON "ServiceRecord"("bikeId");
 
 -- AddForeignKey
 ALTER TABLE "Bike" ADD CONSTRAINT "Bike_customerId_fkey" FOREIGN KEY ("customerId") REFERENCES "Customer"("customerId") ON DELETE RESTRICT ON UPDATE CASCADE;
